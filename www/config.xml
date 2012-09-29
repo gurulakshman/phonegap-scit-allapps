@@ -3,10 +3,10 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.hyperwebenable.phonegaptest"
         version   = "2.0.0">
-    <name>guru forst app</name>
+    <name>scit app</name>
 
     <description>
-        this is test app by guru for phone gap
+        scit app from guru
     </description>
 
     <author href="http://phonegap.com" email="gurulakshman@gmail.com">
