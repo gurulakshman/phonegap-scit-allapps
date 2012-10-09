@@ -10,6 +10,8 @@
 
 	<script type="text/javascript" src="jquery.mobile.fixedToolbar.polyfill.js"></script> 
 	<link rel="stylesheet" href="jquery.mobile.css">
+	<script src="phonegap.js"></script>
+<script src="childbrowser.js"></script>
 	
       
 	</head>
@@ -30,13 +32,20 @@
 			$.getJSON("flicker.txt",
 			        function(data){
 			          // alert("data :"+data);
-			           
+			           var linkid=1;
 			          $.each(data.about, function(i,item){
+			          linkid = linkid +1;
 			           // $("<img/>").attr("src", item.image_id).appendTo("#images");
 						// $("#images").append("<div> <a href='"+item.description+"'><img width='100' height='100' src='"+item.image_id+"'>"+ item.name+"</a></div>");
-						// $("#images").append("<div> <a href='#' onClick='setiframeurl()' ><img width='100' height='100' src='"+item.image_id+"'>"+ item.name+"</a></div>");
-						 $("#images").append("<div> <a href='aboutusdetails.html?id=http://api.jquery.com/ready/'  ><img width='100' height='100' src='"+item.image_id+"'>"+ item.name+"</a></div>");
-			
+						// $("#images").append('<div> <a href="#" onClick="window.plugins.childBrowser.showWebPage(http://www.google.com);" ><img width="100" height="100" src="'+item.image_id+'">'+ item.name+'</a></div>');
+						 $("#images").append("<div> <a href='#' id='childlink"+linkid+"'  ><img width='100' height='100' src='"+item.image_id+"'>"+ item.name+"</a></div>");
+						// $("#images").append("<div>").append( <a href='#'><img width='100' height='100' src='"+item.image_id+"'>"+ item.name+"</a></div>");
+			            var childlinkid= "childlink"+linkid;
+			            $("#"+childlinkid).click(function() {
+			            //alert("inside click"+childlinkid);
+			            //alert("url"+item.description);
+      					window.plugins.childBrowser.showWebPage('+item.description+');
+						});
 			          });
 			           
 			        });
@@ -44,7 +53,7 @@
         </script>
 		<script>
 			function setiframeurl(showurl) {
-				alert("inside setiframeurl()"+showurl);
+				//alert("inside setiframeurl()"+showurl);
 			
 			}
 		
