@@ -63,6 +63,18 @@
         <div id="aboutscit">
        
         </div>
+ <script>
+		
+$.getJSON("http://evonixtech.com/ColegSCIT/getlistabout.php",
+        function(data){
+          $.each(data.about, function(i,item){
+            $("<img/>").attr("src", item.image_id).appendTo("#aboutscit");
+            if ( i == 3 ) return false;
+          });
+        });		        
+        </script>
+        
+        
 
         
         
