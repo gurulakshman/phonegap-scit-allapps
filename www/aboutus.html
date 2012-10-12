@@ -41,7 +41,7 @@
 					            $("#"+childlinkid).click(function() {
 					            //alert("inside click"+childlinkid);
 					            //alert("url"+item.description);
-		      					window.plugins.childBrowser.showWebPage(item.description);
+		      					window.plugins.childBrowser.showWebPage(item.description, {showLocationBar: false, showAddress: false, showNavigationBar: false});
 								});
 					          });
 					           
