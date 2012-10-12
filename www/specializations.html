@@ -18,7 +18,7 @@
 	.header_bg{background-image:url('res/footermenu/footer_bg.png');}
 	</style>
 	<div data-role="header" data-position="fixed" class="header_bg">
-		About Us
+		Specialization Offered
 	</div><!-- /header -->
 
 	<div data-role="content">	
@@ -30,18 +30,17 @@
 					        function(data){
 					          // alert("data :"+data);
 					           var linkid=1;
-					          $.each(data.about, function(i,item){
+					          $.each(data.specialization, function(i,item){
 					          linkid = linkid +1;
 								 $("#images").append("<div> <a href='#' id='childlink"+linkid+"'  >"+ item.name+"</a></div>");
 					            var childlinkid= "childlink"+linkid;
 					            $("#"+childlinkid).click(function() {
-					            //alert("inside click"+childlinkid);
-					            //alert("url"+item.description);
-		      					window.plugins.childBrowser.showWebPage(item.description, {showLocationBar: false, showAddress: false, showNavigationBar: false});
+		      						window.plugins.childBrowser.showWebPage(item.description, {showLocationBar: false, showAddress: false, showNavigationBar: false});
 								});
 					          });
 					           
 					        });
+
 		        </script>
 		
 		
