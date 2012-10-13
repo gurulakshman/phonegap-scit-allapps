@@ -34,9 +34,9 @@
 					          linkid = linkid +1;
 								 $("#images").append("<div> <a href='#' id='childlink"+linkid+"' >click here</a></div>");
 					            var childlinkid= "childlink"+linkid;
-					            $("#"+childlinkid).click(function() {
+					            //$("#"+childlinkid).click(function() {
 		      						window.plugins.childBrowser.showWebPage(item.description, {showLocationBar: false, showAddress: false, showNavigationBar: false});
-								});
+								//});
 					          });
 					           
 					        });
