@@ -11,6 +11,8 @@
 
 	<script type="text/javascript" src="jquery.mobile.fixedToolbar.polyfill.js"></script> 
 	<link rel="stylesheet" href="jquery.mobile-1.2.0.min.css">
+	<script src="phonegap.js"></script>
+	<script src="childbrowser.js"></script>
 	
 	
 
@@ -33,7 +35,7 @@
 
 		</div>
 			<script>
-					$.getJSON("getlistspecialization.txt",
+					$.getJSON("http://evonixtech.com/ColegSCIT/getlistspecialization.php",
 					        function(data){
 					          // alert("data :"+data);
 					           var linkid=1;
